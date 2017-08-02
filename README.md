@@ -11,6 +11,31 @@ Compilr will create a simple API server on port 8080 by default. You can compile
 // { "content": <code> }
 { "content": "let x = 10; console.log('hello world!' + x);" }
 ```
+**Note that each compilr may have a different request body structure, depending on the language's specification.**
+
+For example, in Java, you must specify the file name which will be the same as your class name.
+```javascript
+// This is an example of compilr-javascript
+/*
+ { "files": [
+  {
+      "name": <class_name>,
+      "content": <source_code>
+  }
+ ] }
+*/
+{ "files": [
+ {
+     "name": "Run",
+     "content": "public class Run {
+         public static void main(String[] arg) {
+           System.out.println("Hello World!");
+         }
+       }"
+ }
+] }
+```
+
 The response will be in JSON format with structure:
 ```javascript
 // {
