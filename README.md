@@ -4,7 +4,9 @@
 Compilr is a docker-based API server for compile and running source code.
 Once you have downloaded and created a docker container using our provided image, your API server will start running automatically.
 
-Compilr will create a simple API server on port 8080 by default. You can compile and run you code by sending a `POST` request to your https://localhost:8080/compile route, with a JSON request body similar to:
+## Usage
+### Request
+Compilr will create a simple API server on port 8080 by default. You can compile and run you code by sending a HTTP `POST` request to your https://localhost:8080/compile route, with a JSON request body similar to:
 ```javascript
 // This is an example of compilr-javascript
 
@@ -37,7 +39,7 @@ For example, in Java, you must specify the file name which will be the same as y
    { "content": <code> }
  ] }
 ```
-
+### Response
 The response will be in JSON format with structure:
 ```javascript
   {
@@ -54,6 +56,7 @@ The response will be in JSON format with structure:
 ```
 If there is a compile/run error, success field will be `false` and the error output will be shown.
 
+---
 ***every compilr also provide a simple code editor frontend on your https://localhost:8080***
 
 ![frontend image](compilr.png)
