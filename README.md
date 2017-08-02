@@ -4,6 +4,14 @@
 Compilr is a docker-based API server for compile and running source code.
 Once you have downloaded and created a docker container using our provided image, your API server will start running automatically.
 
+# Available compilr
+| Language     | URL     |
+| :------------- | :------------- |
+| C       | ~~[compilr-clang](https://github.com/kykungz/compilr-clang)~~ *WIP|
+| Javascript       | [compilr-javascript](https://github.com/kykungz/compilr-javascript)|
+| Java       |[compilr-java](https://github.com/kykungz/compilr-java)|
+| Python       | ~~[compilr-python](https://github.com/kykungz/compilr-python)~~ *WIP|
+
 ## Usage
 ### Request
 Compilr will create a simple API server on port 8080 by default. You can compile and run your code by sending a HTTP `POST` request to your https://localhost:8080/compile route, with a JSON request body similar to:
@@ -60,11 +68,3 @@ If there is a compile/run error, success field will be `false` and the error out
 ***every compilr also provide a simple code editor frontend on your https://localhost:8080***
 
 ![frontend image](compilr.png)
-
-# Available compilr
-| Language     | URL     |
-| :------------- | :------------- |
-| C       | ~~[compilr-clang](https://github.com/kykungz/compilr-clang)~~ *WIP|
-| Javascript       | [compilr-javascript](https://github.com/kykungz/compilr-javascript)|
-| Java       |[compilr-java](https://github.com/kykungz/compilr-java)|
-| Python       | ~~[compilr-python](https://github.com/kykungz/compilr-python)~~ *WIP|
