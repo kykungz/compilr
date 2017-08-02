@@ -6,7 +6,7 @@ Once you have downloaded and created a docker container using our provided image
 
 ## Usage
 ### Request
-Compilr will create a simple API server on port 8080 by default. You can compile and run you code by sending a HTTP `POST` request to your https://localhost:8080/compile route, with a JSON request body similar to:
+Compilr will create a simple API server on port 8080 by default. You can compile and run your code by sending a HTTP `POST` request to your https://localhost:8080/compile route, with a JSON request body similar to:
 ```javascript
 // This is an example of compilr-javascript
 
